@@ -1,0 +1,377 @@
+
+:root{
+  --headerback:#252934;
+  --navback:#1B242F;
+  --navborder:#04C2C9;
+  --textColor:#F7C548;
+  --textwhite:#ffff;
+  --textSecondColor:#5A5A5A;
+  --skillBackground:#E5E2E2;
+  --skillanim:#04A4AA;
+  --titleText:#444649;
+  --projectback:#f5f5f5;
+}
+ * {
+     padding: 0;
+     margin: 0;
+     font-family: 'josefin sans' , sans-serif;
+     box-sizing: border-box;
+ }
+
+
+html {
+     scroll-behavior: smooth;
+ }
+
+.hero {
+     height: 100vh;
+     width: 100%;
+     background-image: url(/img/3.JPG);
+     background-size: cover;
+     background-position: center;
+ }
+
+  nav {
+      z-index: 999;
+      position: fixed;
+      width: 100%;
+      padding-left: 3%;
+      padding-right: 3%;      
+      background-color: #191919;
+      height: 10%;
+ }
+
+ .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1300px;
+    padding-top: 15px;
+    
+
+ }
+ 
+ .logo a {
+     color: white;
+     font-size: 35px;
+     font-weight: 600;
+     letter-spacing: 1px;
+     cursor: pointer;
+     text-decoration: none;
+
+ }
+span {
+    color: #F7C548;
+   
+}
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+nav ul li a:hover {
+    color: #F7C548;
+    transition: .3s;
+}
+.btn{
+    background-color: #F7C548;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 8px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+
+}
+.btn:hover {
+    transform: scale(1.2);
+}
+
+
+button {
+    background-color: #F7C548;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+button:hover {
+    background-color: transparent;
+    border: 2px solid;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    margin: 3px;
+    padding-top: 3px;
+    transition: all 0.3s ease;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+/* --------------------------------------- */
+/* article content */
+
+.container{
+  margin:auto;
+  background-color: #101010;
+}
+.content{
+  width:70%;
+  margin:auto;
+  border:1px solid rgb(196, 192, 192);
+  background-color: var(--textwhite);
+}
+
+
+
+.blog-image{
+  width:100%;
+
+}
+.blog-image img{
+  width:100%;
+  height:50vh;
+}
+.blogger-profile-date{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  padding-top: 5px;
+  width:10.5vw;
+  margin-left: 1.5rem;
+}
+.blogger-image{
+   width:50px;
+  height: 50px;
+  clip-path: polygon(0 28%, 48% 0, 100% 25%, 100% 71%, 50% 100%, 0 73%);
+}
+.blogger-image img{
+  width:50px;
+  height:50px;
+}
+.blogger-name{
+  font-family: 'josefin sans' , sans-serif;
+  font-weight: 700;
+  font-size:13px;
+  padding-bottom:3px;
+}
+.date-posted{
+  font-family: 'josefin sans' , sans-serif;
+  font-weight:500;
+  font-size: 11px;
+}
+.blog-title-container{
+  padding:0px 20px 20px 20px;
+  font-size:40px;
+}
+.blog-title-container .title-blog{
+  font-family: Raleway;
+  font-weight:700;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+
+}
+.blog-full-content{
+  padding:40px;
+  line-height:20pt;
+  font-family: 'josefin sans' , sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color:var(--textSecondColor)
+}
+.guest-comment{
+  font-family: 'josefin sans' , sans-serif;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.8);
+}
+.blog-comment{
+  width:100%;
+}
+.blog-final-line{
+  width:100%;
+  border:1px solid var(--textSecondColor);
+  font-size:2px;
+  height:.3px;
+  clip-path: polygon(99% 53%, 98% 54%, 100% 54%, 0 55%, 0 51%, 0 54%);
+}
+.comments-title{
+  display:flex;
+  justify-content: space-between;
+  padding:20px 60px 20px 105px;
+}
+.subscribe{
+  border:2px solid var(--textSecondColor);
+  padding:8px;
+  margin-right:50px;
+  border-radius:10px;
+  text-align: center;
+  font-family: 'josefin sans' , sans-serif;
+  font-weight:500;
+  width:7vw;
+}
+.comments-input{
+  width:80%;
+  padding:5px 60px 20px 10px;
+  margin:auto;
+  position: relative;
+  min-height:40vh;
+  
+}
+#comment{
+  width:100%;
+  border:1px solid var(--textSecondColor);
+  border-radius: 10px;
+}
+.comment-btn{
+  position:absolute;
+  top:180px;
+  left:599px;
+  right:0;
+  padding:10px;
+  text-align:center;
+  width:7vw;
+  font-family: 'josefin sans' , sans-serif;
+  font-weight:600;
+  border-radius:10px ;
+  border: 3px solid var(--textColor);
+
+}
+.comment-btn:hover{
+  border:3px solid var(--textColor);
+  background-color: var(--textColor);
+  color: var(--textwhite);
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.comments-container{
+  padding:20px 60px 20px 60px;
+}
+
+.comment-guest{
+  display: flex;
+  align-items: center;
+  width:100%;
+  padding-left:35px;
+}
+.comment-holder{
+  border:1px solid rgb(196, 192, 192);
+  padding-left:20px;
+  min-height:120px;
+  border-radius: 5px;
+  margin:10px 50px 10px 30px;
+  width:45.5vw;
+}
+.guest-comment{
+  display: flex;
+  align-items: center;
+  padding-top:10px;
+}
+.guest-name{
+  font-family: 'josefin sans' , sans-serif;
+  font-weight:600;
+  font-size:20px;
+  margin-right:2px;
+}
+.guest-dot{
+  font-size:20px;
+}
+.guest-comment .date{
+  font-size:15px;
+  margin-left:2px;
+  font-weight:500;
+}
+.comment-description{
+  padding-top:15px;
+  font-family: 'josefin sans' , sans-serif;
+  font-weight:400;
+}
+.guest-profile{
+  width:50px;
+  height: 50px;
+  clip-path: polygon(0 28%, 48% 0, 100% 25%, 100% 71%, 50% 100%, 0 73%);
+}
+.guest-profile img{
+  width:50px;
+  height:50px;
+}
+
+/* ---- mobine view */
+
+@media screen and (max-width:768px){
+  .container{
+    min-height:410vh;
+  }
+  .content{
+    min-height:405vh;
+  }
+  .nav-content{
+    padding:0px 20px 0px 20px;
+  }
+  .content-link{
+    width:45vw;
+  }
+  .login{
+    width:10vw;
+  }
+  .profile-full{
+    width:25vw;
+  }
+  .content{
+    width:95%;
+  }
+  .blogger-profile-date{
+    width:37vw;
+  }
+  .blog-full-content{
+    padding:20px;
+    font-size:15px;
+  }
+  .comments-title{
+    padding:10px 10px 25px 30px;
+    width:90%;
+  }
+  .subscribe{
+    width:25vw;
+  }
+  .comments-input{
+    width:90%;
+    margin-left:10px;
+    padding:0;
+  }
+  .comments-container{
+    width:95%;
+    padding:0px;
+  }
+  .comment-guest{
+  width:95%;
+  padding:10px;
+  margin-left:15px;
+  }
+  .comment-holder{
+    width:90%;
+    margin:0px 20px 0px 20px;
+  }
+  .comment-btn{
+    left:200px;
+    width:25vw;
+  }
+}
