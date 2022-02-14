@@ -5,6 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/article.css"/>
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
   <title>Blog-article</title>
 
@@ -52,7 +56,10 @@
         
       </div>
       <div class="blog-final-line"></div>
-      <a href="" class="like" ><i class="fab fa-likes"></i></a>
+      <div class="likes">
+        <a href="" class="like" ><i class="fa fa-thumbs-up"></i></a>
+        <p id="likes-number"></p>
+      </div>
       <form>
         <div class="blog-comment">
           <div class="name-title">
@@ -62,7 +69,7 @@
             </div> -->
           </div>
           <div class="name-input">
-            <input name="comment" id="name"type="text"/>
+            <input name="name" id="name" type="text" placeholder="Enter your Name"/>
             <span class="name error-message"></span>
           </div>
           <div class="comments-title">
@@ -72,40 +79,32 @@
             </div> -->
           </div>
           <div class="comments-input">
-            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            <textarea name="comment" id="comment" cols="30" rows="10" placeholder= "Enter your comment Here"></textarea>
             <span class="comment error-message"></span>
             <div class="comment-btn">SEND</div>
           </div>
         </div>
       </form>
-        <div class="comments-container">
+        <div class="comments-container" id="comment-holder">
           <div class="comment-guest">
-          <div class="guest-profile">
-            <img src="/img/12.jpg" alt="guest profile picture" class="guest">
-          </div>
+            <div class="guest-profile">
+              <img src="/img/12.jpg" alt="guest profile picture" class="guest">
+            </div>
 
-        <div class="comment-holder">
-          <div class="guest-comment">
-            <h6 class="guest-name">Mugisha</h6>
-            <p class="guest-dot">.</p>
-            <p class="date">Jan,01,2022</p>
-          </div>
-          <div class="comment-description">
-            <p class="comment">
-              nice one thanks!
-            </p>
-          </div>
-        </div>
+            <div class="comment-holder" >
+              <div class="guest-comment">
+                <h6 class="guest-name">Mugisha</h6>
+                <p class="guest-dot">.</p>
+                <p class="date">Jan,01,2022</p>
+              </div>
+              <div class="comment-description">
+                <p class="comment">
+                  nice one thanks!
+                </p>
+              </div>
+            </div>
           
-        </div>
-
-        
-              
-            </p>
           </div>
-          </div>
-          
-        </div>
         </div>
       </div>
     </div>

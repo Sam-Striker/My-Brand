@@ -95,8 +95,15 @@ nav ul li a:hover {
 .btn:hover {
     transform: scale(1.2);
 }
-
-
+.likes{
+  padding:20px 40px;
+  display:flex;
+  width:160px;
+  justify-content: space-around;
+}
+#likes-number{
+  text-align:center;
+}
 button {
     background-color: #F7C548;
     color: white;
