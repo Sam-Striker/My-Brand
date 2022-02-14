@@ -3,14 +3,11 @@ const regxmail = /^[\w]{2,}@(gmail|yahoo|hotmail)\.(com|fr|rw|info|org)$/g ;
     const signInButton = document.getElementById('signIn');
     const container = document.getElementById('container');
     const signInform = document.querySelector(".sign-in-container")
-
     const signInbtn = document.querySelector(".login-btn")
-
     const signUpform = document.querySelector(".sign-up-container")
 
 
     signInform.style.display = "none"
-
     signUpButton.addEventListener('click', () => {
        signInform.style.display = 'none';
              signUpform.style.display = 'block' 
@@ -26,7 +23,6 @@ const error3 = document.getElementById("error11")
 const error4 = document.getElementById("error12")
 const signinEmail = document.getElementById("email")
 const signinPassword = document.getElementById("password")
-
 const user = localStorage.getItem('users');
 const localUsers = JSON.parse(user);
 
@@ -71,9 +67,8 @@ signInbtn.addEventListener('click', (e) => {
   }
 
 
-  
-
 })
+
 /////////////////////////////////////////// SIGN UP ///////////////////
 const names = document.querySelector("#name2")
 const error = document.querySelector(".error-message")

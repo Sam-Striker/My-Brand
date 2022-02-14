@@ -1,17 +1,63 @@
 // populating data  in the dashboard
 
-const newCredentials = localStorage.getItem("loginCredentials");
-const cred = JSON.parse(newCredentials);
+let blogCardElement = document.querySelector(".section-content");
+// const newCredentials = localStorage.getItem("loginCredentials");
+// const cred = JSON.parse(newCredentials);
 // if (cred.isLoggedIn === false) {
 //   window.location.replace("../login.html");
 // }
-console.log(cred);
+// console.log(cred);
 const deleteBlo = document.querySelector("#my-delete-model");
 
 // delete article function
 
-const RetrieveArticles = localStorage.getItem("blogList");
-const RetrievedObj = JSON.parse(RetrieveArticles);
+console.log("Let's go...");
+
+async function blogFetch(){
+response = await fetch("https://striker-server.herokuapp.com/api/v1/blog/getAll");
+AllPosts = await response.json(); 
+console.log(AllPosts.data);
+  let blogs = []
+  
+  const result = AllPosts.data
+
+  result.forEach(blog => {
+    
+    let { _id, Author, Title, Content, imageUrl } = blog
+
+    blogs += `<div class="article-card">
+      <a href="./article.html?id=${_id}" data-id=${_id}>
+        <div class="article-owner-image">
+          <img src="${imageUrl}" alt="importance of reading" width="400" height="350"/>
+        </div>
+        <div class="article-title-date">
+          <h3 class="title-articles">${Title}</h3>
+          <p class="date-article">march, 12,2021</p>
+          <div class="article-line"></div>
+        </div>
+        <div class="article-description">
+          <p class="blog-content-description">${Content}</p>
+        </div>
+      </a>
+      <div class="edit-delete">
+        <div class="edit-skill-article" id="edit-skill">
+          <i onclick="update(${_id})" class="fas fa-pen update"></i>
+        </div>
+        <div class="delete-blog">
+          <i onclick="deleteArticle(${_id})" class="fas fa-trash-alt delete"></i>
+        </div>
+      </div>
+    </div>`
+    if (blogs.length === 0) blogCardElement.innerHTML = " No blogs Created";
+     blogCardElement.innerHTML += blogs;
+  })
+}
+blogFetch()
+
+
+
+// const RetrieveArticles = localStorage.getItem("blogList");
+const RetrievedObj = JSON.parse(AllPosts.data);
 function deleteArticle(id) {
   console.log(RetrievedObj);
   RetrievedObj.splice(
@@ -102,37 +148,37 @@ document.querySelector('.cancel-update-btn').onclick = () => {
 
 
 const getData = JSON.parse(RetrieveArticles);
-let blogCardElement = document.querySelector(".section-content");
-getData?.forEach((element, i) => {
-  let body = element.description?.slice(0, 120) + "....";
-  const html = `
-    <div class="article-card">
-      <a href="./article.html?id=${element.id}" data-id=${element.id}>
-        <div class="article-owner-image">
-          <img src="${element.imageUrl}" alt="importance of reading" width="400" height="350"/>
-        </div>
-        <div class="article-title-date">
-          <h3 class="title-articles">${element.title}</h3>
-          <p class="date-article">march, 12,2021</p>
-          <div class="article-line"></div>
-        </div>
-        <div class="article-description">
-          <p class="blog-content-description">${body}</p>
-        </div>
-      </a>
-      <div class="edit-delete">
-        <div class="edit-skill-article" id="edit-skill">
-          <i onclick="update(${element.id})" class="fas fa-pen update"></i>
-        </div>
-        <div class="delete-blog">
-          <i onclick="deleteArticle(${element.id})" class="fas fa-trash-alt delete"></i>
-        </div>
-      </div>
-    </div>`
+// let blogCardElement = document.querySelector(".section-content");
+// getData?.forEach((element, i) => {
+//   let body = element.description?.slice(0, 120) + "....";
+//   const html = `
+//     <div class="article-card">
+//       <a href="./article.html?id=${element.id}" data-id=${element.id}>
+//         <div class="article-owner-image">
+//           <img src="${element.imageUrl}" alt="importance of reading" width="400" height="350"/>
+//         </div>
+//         <div class="article-title-date">
+//           <h3 class="title-articles">${element.title}</h3>
+//           <p class="date-article">march, 12,2021</p>
+//           <div class="article-line"></div>
+//         </div>
+//         <div class="article-description">
+//           <p class="blog-content-description">${body}</p>
+//         </div>
+//       </a>
+//       <div class="edit-delete">
+//         <div class="edit-skill-article" id="edit-skill">
+//           <i onclick="update(${element.id})" class="fas fa-pen update"></i>
+//         </div>
+//         <div class="delete-blog">
+//           <i onclick="deleteArticle(${element.id})" class="fas fa-trash-alt delete"></i>
+//         </div>
+//       </div>
+//     </div>`
 
-  if (i === 0) blogCardElement.innerHTML = html;
-  else blogCardElement.innerHTML += html;
-});
-if (getData.length === 0) {
-  blogCardElement.textContent = 'No blog created!';
-}
+//   if (i === 0) blogCardElement.innerHTML = html;
+//   else blogCardElement.innerHTML += html;
+// });
+// if (getData.length === 0) {
+//   blogCardElement.textContent = 'No blog created!';
+// }
