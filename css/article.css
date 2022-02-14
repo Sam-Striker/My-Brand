@@ -206,6 +206,11 @@ button:hover {
 .blog-comment{
   width:100%;
 }
+.name-title{
+  display:flex;
+  justify-content: space-between;
+  padding: 20px 60px 20px 105px;
+}
 .blog-final-line{
   width:100%;
   border:1px solid var(--textSecondColor);
@@ -228,22 +233,41 @@ button:hover {
   font-weight:500;
   width:7vw;
 }
+.name-input{
+  width:80%;
+  padding:5px 60px 20px 10px;
+  margin:auto;
+  position: relative;
+}
 .comments-input{
   width:80%;
   padding:5px 60px 20px 10px;
   margin:auto;
   position: relative;
   min-height:40vh;
-  
+}
+#name{
+  width:100%;
+  border-radius: 10px;
+  padding:20px;
+  border:1px solid var(--textSecondColor);
+  padding:10px 30px 10px 30px;
+  font-size: 20px;
+  font-family: 'josefin sans' , sans-serif;
+  font-weight: 400;
 }
 #comment{
   width:100%;
   border:1px solid var(--textSecondColor);
   border-radius: 10px;
+  padding:10px 30px 10px 30px;
+  font-size: 20px;
+  font-family: 'josefin sans' , sans-serif;
+  font-weight: 400;
 }
 .comment-btn{
   position:absolute;
-  top:180px;
+  top:270px;
   left:599px;
   right:0;
   padding:10px;
