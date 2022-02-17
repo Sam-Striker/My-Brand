@@ -103,14 +103,8 @@ const handleCreateArticle = (e) => {
       model.style.display = "none";
       window.location.reload();
     }
-
-    // document.querySelector("form").reset();
-
-    // window.location.reload();
   }
 };
-
-
 
  const validateTitle = (title) => {
    if (!title.trim()) return "Title of the article is required";
@@ -141,12 +135,6 @@ window.onclick = function (event) {
     model.style.display = "none";
   }
 };
-// edit blog
-
-// editBlog.addEventListener("click", function () {
-//   editModel.style.display = "block";
-//   console.log("hi dear");
-// });
 
 editBlog1.addEventListener("click", function () {
   editModel.style.display = "block";
@@ -166,9 +154,7 @@ window.onclick = function () {
     editModel.style.display = "none";
   }
 };
-// saveedit.addEventListener("click", function () {
-//   editModel.style.display = "none";
-// });
+
 canceledit.addEventListener("click", function () {
   editModel.style.display = "none";
 });

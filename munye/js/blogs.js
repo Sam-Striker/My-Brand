@@ -1,17 +1,7 @@
 // populating data  in the dashboard
 
 let blogCardElement = document.querySelector(".section-content");
-// const newCredentials = localStorage.getItem("loginCredentials");
-// const cred = JSON.parse(newCredentials);
-// if (cred.isLoggedIn === false) {
-//   window.location.replace("../login.html");
-// }
-// console.log(cred);
 const deleteBlo = document.querySelector("#my-delete-model");
-
-// delete article function
-
-console.log("Let's go...");
 
 async function blogFetch(){
 response = await fetch("https://striker-server.herokuapp.com/api/v1/blog/getAll");
@@ -57,6 +47,13 @@ blogFetch()
 
 
 // const RetrieveArticles = localStorage.getItem("blogList");
+
+async function deleteArticle(){
+response = await fetch("https://striker-server.herokuapp.com/api/v1/blog/delete");
+deletee = await response.json(); 
+console.log(deletee.data);
+}
+
 const RetrievedObj = JSON.parse(AllPosts.data);
 function deleteArticle(id) {
   console.log(RetrievedObj);
@@ -70,6 +67,12 @@ function deleteArticle(id) {
 }
 
 // update an article
+
+async function updateArticle(){
+response = await fetch("https://striker-server.herokuapp.com/api/v1/blog/update");
+updatee = await response.json(); 
+console.log(updatee.data);
+}
 
 const editModelss = document.querySelector("#my-edit-model");
 

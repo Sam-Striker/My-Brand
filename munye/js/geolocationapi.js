@@ -1,8 +1,3 @@
-// const successCallback = (position) => {
-// };
-
-// const errorCallback = (error) => {
-// };
 
 navigator.geolocation.getCurrentPosition(
   (position) => {

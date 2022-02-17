@@ -41,6 +41,17 @@ getBlogs?.map((article) => {
       }
       // getComments();
     };
+
+    
+      async function getComments() {
+        response = await fetch(
+          "https://striker-server.herokuapp.com/api/v1/blog/comment"
+        );
+        Comments = await response.json();
+        console.log(comments.commentsData);
+      }
+
+
     const validateName = (name) => {
       if (!name.trim()) return "Name field is required";
       return " ";
